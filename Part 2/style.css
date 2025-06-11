@@ -1,0 +1,150 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --highlight: #ca9e7a;
+  --primary: rgb(135, 100, 75);
+  --shadow: #4d433d;
+  --bg: rgb(17, 7, 5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10%;
+  background-color: rgb(17, 7, 5, 0.8);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+/* Navbar logo */
+.navbar .navbar-logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--highlight);
+}
+
+/* Navbar Utama (navbar-nav) */
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.8rem;
+  margin: 0 1rem;
+}
+
+/* Animasi cursor pada navbar-nav */
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.6);
+}
+
+/* Main */
+.main {
+  padding-top: 9rem;
+  margin: 0 4rem;
+}
+
+.main .content {
+  width: 40rem;
+}
+
+.main .content h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.main .content p {
+  font-size: 2rem;
+}
+
+.main .button a {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(20, 141, 216, 0.5);
+}
+
+.main .button a:hover {
+  color: var(--primary);
+  background-color: #fff;
+}
+
+.contact {
+  padding-top: 12rem;
+  /* height: 1000px; */
+}
+
+.contact .container {
+  display: flex;
+}
+
+.contact .container .box {
+  width: 10rem;
+  margin: auto;
+  padding-bottom: 27rem;
+}
+
+.contact .container .box img {
+  background-image: cover;
+  background-position: center;
+  height: 10rem;
+  border-radius: 100%;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  /* Mobile */
+  @media (max-width: 450px) {
+    html {
+      font-size: 55%;
+    }
+  }
+}
